@@ -1,0 +1,341 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen Muhammed - Afrofuturistic Writer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    /* Custom Styles */
+    body {
+        font-family: 'Georgia', serif;
+        background-color: #f8f9fa;
+    }
+    .hero-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1920x1080/?afrofuturism,cyberpunk,africa');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Creates a parallax effect */
+    }
+    .nav-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://source.unsplash.com/random/1920x200/?afrofuturism,space,stars');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .typing-effect {
+        border-right: 2px solid #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: blinkCursor 0.7s infinite;
+    }
+    @keyframes blinkCursor {
+        50% { border-color: transparent; }
+    }
+    .portfolio-item, .book-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .portfolio-item:hover, .book-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .filter-btn.active {
+        background-color: #1a202c;
+        color: #fff;
+    }
+    .read-btn {
+        background-color: #4a5568;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s ease;
+    }
+    .read-btn:hover {
+        background-color: #2d3748;
+    }
+</style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="nav-bg text-white fixed w-full top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold">Stephen Muhammed</a>
+        <ul class="flex space-x-6">
+            <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+            <li><a href="#about" class="hover:text-gray-300">About</a></li>
+            <li><a href="#portfolio" class="hover:text-gray-300">Portfolio</a></li>
+            <li><a href="#books" class="hover:text-gray-300">Books</a></li>
+            <li><a href="#blog" class="hover:text-gray-300">Blog</a></li>
+            <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+    <!-- Hero Section -->
+<section id="home" class="hero-bg h-screen flex items-center justify-center text-white">
+    <div class="text-center">
+        <h1 class="text-5xl font-bold mb-4">Stephen Muhammed</h1>
+        <p class="text-2xl typing-effect" id="typing-text"></p>
+        <a href="#books" class="mt-6 inline-block bg-gray-900 text-white py-2 px-6 rounded hover:bg-gray-700">Discover My Books</a>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="/book-cover/jam.jpg" alt="Stephen Muhammed" class="w-48 h-48 rounded-full mb-6 md:mb-0 md:mr-10">
+                <div>
+                    <p class="text-lg mb-4">I'm Justice Muhammed Okan, writing as Stephen Muhammed, hailing from Auchi, Edo State, Nigeria, where I started scribbling tales at 16, driven by the glaring gap in Afrofuturistic stories on the shelves. With a degree in Educational Administration and Planning from the University of Abuja, I now teach in a secondary school, dreaming up worlds between lesson plans.</p>
+                    <p class="text-lg mb-4">I am fueled by a mission to flood the market with African futures--and it's just the first spark in a blazing universe of interconnected books.</p>
+                    <a href="#contact" class="inline-block bg-gray-900 text-white py-2 px-6 rounded hover:bg-gray-700">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10">Portfolio</h2>
+            <div class="flex justify-center mb-8">
+                <button class="filter-btn px-4 py-2 mx-2 square bg-gray-200 hover:bg-gray-300 active" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 mx-2 rounded bg-gray-200 hover:bg-gray-300" data-filter="fiction">Fiction</button>
+                <button class="filter-btn px-4 py-2 mx-2 rounded bg-gray-200 hover:bg-gray-300" data-filter="short-stories">Short Stories</button>
+                <button class="filter-btn px-4 py-2 mx-2 rounded bg-gray-200 hover:bg-gray-300" data-filter="articles">Articles</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="portfolio-item bg-white p-6 rounded shadow-lg" data-category="fiction">
+                    <h3 class="text-xl font-bold mb-2"></h3>
+                    <p class="text-gray-600 mb-4">A short story exploring a futuristic Nigeria where ancient myths power advanced technology.</p>
+                    <a href="#" class="text-gray-900 hover:underline">Read More</a>
+                </div>
+                <div class="portfolio-item bg-white p-6 rounded shadow-lg" data-category="short-stories">
+                    <h3 class="text-xl font-bold mb-2">The Orisha Circuit</h3>
+                    <p class="text-gray-600 mb-4">A tale of a young coder harnessing ancestral spirits to reshape Africa's digital future.</p>
+                    <a href="#" class="text-gray-900 hover:underline">Read More</a>
+                </div>
+                <div class="portfolio-item bg-white p-6 rounded shadow-lg" data-category="articles">
+                    <h3 class="text-xl font-bold mb-2">Afrofuturism Rising</h3>
+                    <p class="text-gray-600 mb-4">An essay on the growing influence of African speculative fiction in global literature.</p>
+                    <a href="#" class="text-gray-900 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10">Books</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="/book-item bg-gray-50 p-6 rounded shadow-lg">
+                    <img src="book-cover/Pishon.jpg" alt="Pishon" class="w-full h-64 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-bold mb-2">Pishon: the uprising</h3>
+                    <p class="text-gray-600 mb-4">Dayo, an ordinary man with extraordinary abilities, rises to become the Super Agent, tasked with safeguarding Pishon from threats both internal and external. However, as he embraces his new role, he uncovers a web of political conspiracies, supernatural forces, and power struggles that threaten to tear the kingdom apart. The peace Pishon once knew is fragile, and Dayo must confront enemies not only from outside but from within its very walls.
+
+With the kingdom on the brink of chaos, Dayo must navigate the shadows of Pishon's power structure, protecting its people while unraveling the mysteries of his own identity. The fate of Pishon rests in his hands. This is the tale of a protector, a kingdom, and the battle against forces beyond comprehension.</p>
+                    <a href="Pishon.html" class="read-btn inline-block mr-2">Read Online</a>
+                    <a href="#" class="text-gray-900 hover:underline">Buy Now</a>
+                </div>
+                <div class="book-item bg-gray-50 p-6 rounded shadow-lg">
+                    <img src="/book-cover/Flare.jpg" alt="The Flare" class="w-full h-64 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-bold mb-2">The Flare</h3>
+                    <p class="text-gray-600 mb-4">In the neon-lit streets of Wellrose, a city teetering on the edge of chaos, a fiery crash in 2100 unleashes the Neon Stone--an alien artifact that ignites a war between heroes and monsters. Alex Rosicky, a grieving son resurrected by its power, rises as The Flare, a lightning-fueled vigilante fighting to save a city that
+fears him. Alongside his team, the Paragon, he battles rogue superhumans, aruthless corporation, and a sister lost to darkness. As Genesys Corp tightens its
+grip and an ancient evil awakens, Alex must confront his past and unite a frac-tured world to stop a catastrophe that threatens all of humanity. Packed with
+heart-pounding action and raw emotion, The Flare is a gripping tale of sacrifice,redemption, and the unyielding spark of heroism..</p>
+                    <a href="books/Flare.html" class="read-btn inline-block mr-2">Read Online</a>
+                    <a href="#" class="text-gray-900 hover:underline">Buy Now</a>
+                </div>
+                <div class="book-item bg-gray-50 p-6 rounded shadow-lg">
+                    <img src="/book-cover/Orchids.jpg" alt="Orchids" class="w-full h-64 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-bold mb-2">Orchids</h3>
+                    <p class="text-gray-600 mb-4">The tale of a love that span ages.</p>
+                    <a href="books/Orchids.html" class="read-btn inline-block mr-2">Read Online</a>
+                    <a href="#" class="text-gray-900 hover:underline">Buy Now</a>
+                </div>
+                                </div>
+                <div class="book-item bg-gray-50 p-6 rounded shadow-lg">
+                    <img src="/book-cover/teen.wepb" alt="teenage" class="w-full h-64 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-bold mb-2">Teen-Age R</h3>
+                    <p class="text-gray-600 mb-4">In a world where superheroes and extraordinary events are the norm, 'Ordinary Lives' follows the journey of average high school teenagers navigating love, friendship, and adolescence amidst the chaos. This relatable coming-of-age story explores themes of identity, self-discovery and the struggles of growing up, all while surrounded by the extraordinary. Dive into the lives of these teenagers as they try to find their place in a world that's anything but ordinary.</p>
+                    <a href="books/teenage.html" class="read-btn inline-block mr-2">Read Online</a>
+                    <a href="#" class="text-gray-900 hover:underline">Buy Now</a>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10">Blog</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-6 rounded shadow-lg">
+                    <h3 class="text-xl font-bold mb-2">Crafting Afrofuturistic Worlds</h3>
+                    <p class="text-gray-600 mb-4">Tips for writers blending African culture with speculative fiction.</p>
+                    <a href="#" class="text-gray-900 hover:underline">Read Post</a>
+                </div>
+                <div class="bg-gray-50 p-6 rounded shadow-lg">
+                    <h3 class="text-xl font-bold mb-2">The Future of African Literature</h3>
+                    <p class="text-gray-600 mb-4">How Afrofuturism is reshaping global storytelling.</p>
+                    <a href="#" class="text-gray-900 hover:underline">Read Post</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10">Contact Me</h2>
+            <form id="contact-form" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg mb-2">Name</label>
+                    <input type="text" id="name" class="w-full p-3 rounded bg-gray-800 text-white border border-gray-700" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg mb-2">Email</label>
+                    <input type="email" id="email" class="w-full p-3 rounded bg-gray-800 text-white border border-gray-700" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-lg mb-2">Message</label>
+                    <textarea id="message" class="w-full p-3 rounded bg-gray-800 text-white border border-gray-700" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-white text-gray-900 py-3 rounded hover:bg-gray-200">Send Message</button>
+            </form>
+            <p id="form-message" class="text-center mt-4 hidden"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">Follow me on social media:</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://twitter.com" target="_blank" class="hover:text-gray-300"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-gray-300"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com" target="_blank" class="hover:text-gray-300"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            <p class="mt-4">© 2025 Stephen Muhammed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Typing Effect for Hero Section
+        const typingText = document.getElementById('typing-text');
+        const phrases = ['Afrofuturist', 'Novelist', 'Storyteller', 'Visionary'];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            if (!isDeleting && charIndex <= currentPhrase.length) {
+                typingText.textContent = currentPhrase.substring(0, charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else if (isDeleting && charIndex >= 0) {
+                typingText.textContent = currentPhrase.substring(0, charIndex);
+                charIndex--;
+                setTimeout(type, 50);
+            } else {
+                isDeleting = !isDeleting;
+                if (!isDeleting) {
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                }
+                setTimeout(type, isDeleting ? 1000 : 200);
+            }
+        }
+        type();
+
+        // Portfolio Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formMessage.classList.remove('hidden');
+            formMessage.classList.add('text-green-400');
+            formMessage.textContent = 'Thank you for your message! I'll get back to you soon.';
+            contactForm.reset();
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
+.<style>
+    /* Custom Styles */
+    body {
+        font-family: 'Georgia', serif;
+        background-color: #f8f9fa;
+    }
+    .hero-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1920x1080/?afrofuturism,cyberpunk,africa');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Creates a parallax effect */
+    }
+    .nav-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://source.unsplash.com/random/1920x200/?afrofuturism,space,stars');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .typing-effect {
+        border-right: 2px solid #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: blinkCursor 0.7s infinite;
+    }
+    @keyframes blinkCursor {
+        50% { border-color: transparent; }
+    }
+    .portfolio-item, .book-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .portfolio-item:hover, .book-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .filter-btn.active {
+        background-color: #1a202c;
+        color: #fff;
+    }
+    .read-btn {
+        background-color: #4a5568;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s ease;
+    }
+    .read-btn:hover {
+        background-color: #2d3748;
+    }
+</style>
